@@ -8,7 +8,8 @@ import RessourcenEintrag from './RessourcenEintrag.astro';
 export interface Props { ausgabeSlug: string; }
 const { ausgabeSlug } = Astro.props;
 
-const alleKurse = await getCollection('weiterbildungen', (e) => e.data.ausgabe === ausgabeSlug);
+const alleKurse = (await getCollection('weiterbildungen', (e) => e.data.ausgabe === ausgabeSlug))
+  .sort((a, b) => a.id.localeCompare(b.id));
 const alleModule = await getCollection('modul', (e) => e.data.ausgabe === ausgabeSlug);
 const alleRessourcen = await getCollection('ressourcen', (e) => e.data.ausgabe === ausgabeSlug);
 
@@ -49,8 +50,8 @@ for (const b of sichtbar) {
 
 {alleModule.length > 0 && (
   <section class="module">
-    <h2>Modulimpulse</h2>
-    <p class="module__sub">Vier Themen für den Unterricht – aufklappen für Zugänge und Quellen.</p>
+    <h2>Modul-Ideen</h2>
+    <p class="module__sub">Vier Themen für den Modulunterricht.</p>
     <div class="module__grid">
       {alleModule.map((m) => <ModulImpuls modul={m} />)}
     </div>

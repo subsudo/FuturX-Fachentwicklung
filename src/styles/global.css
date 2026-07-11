@@ -156,9 +156,9 @@ details[open] > summary [data-chev] { transform: rotate(180deg); }
 /* Fachimpulse & Ressourcen ----------------------------------------- */
 .ressourcen { margin-top: 34px; }
 .ressourcen__sub { margin: 12px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--text2); max-width: 52ch; }
-.ressource { margin-top: 12px; background: #fff; border: 2px solid var(--tinte); border-radius: 3px; padding: 16px 18px; box-shadow: 5px 5px 0 var(--tinte); transition: transform .12s ease, box-shadow .12s ease; }
-.ressource:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--tinte); }
-.ressource:first-of-type { margin-top: 16px; }
+.ressource { margin-top: 8px; background: #fbfaf5; border: 1.5px solid #cbc9bd; border-radius: 3px; padding: 16px 18px; transition: background .12s; }
+.ressource:hover { background: #f2f0e7; }
+.ressource:first-of-type { margin-top: 12px; }
 .ressource__meta { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
 .ressource__wo { font-family: var(--mono); font-size: 11px; letter-spacing: .02em; text-transform: uppercase; color: var(--grau); }
 .ressource__titel { margin: 10px 0 0; font-weight: 700; font-size: 17px; line-height: 1.2; }
