@@ -10,6 +10,7 @@
   --tinte: #191917;   /* Fast-Schwarz */
   --lind: #9DC200;
   --beere: #A12061;
+  --violett: #5E2B91; /* Modulblock */
   --chip: #eef4d8;    /* Tag-Hintergrund grün */
   --text: #3d3d37;
   --text2: #55554d;
@@ -114,12 +115,12 @@ details[open] > summary [data-chev] { transform: rotate(180deg); }
 .chev { color: var(--beere); font-size: 13px; }
 
 /* Modulblock ------------------------------------------------------- */
-.module { margin-top: 34px; background: var(--tinte); border: 2px solid var(--tinte); border-radius: 3px; padding: 24px; box-shadow: 6px 6px 0 var(--lind); }
+.module { margin-top: 34px; background: var(--violett); border: 2px solid var(--tinte); border-radius: 3px; padding: 24px; box-shadow: 6px 6px 0 var(--lind); }
 .module h2 { margin: 0; font-weight: 700; font-size: 28px; letter-spacing: -.02em; color: #fff; }
-.module__sub { margin: 5px 0 18px; font-size: 13.5px; color: #c9c9c2; }
-.module__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+.module__sub { margin: 5px 0 18px; font-size: 13.5px; color: #e6dcf2; }
+.module__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: stretch; }
 @media (max-width: 600px) { .module__grid { grid-template-columns: 1fr; } }
-.modul { background: var(--blatt); border-radius: 3px; overflow: hidden; }
+.modul { background: var(--blatt); border-radius: 3px; overflow: hidden; height: 100%; }
 .modul > summary { cursor: pointer; padding: 15px; }
 .modul__kopf { display: flex; justify-content: space-between; gap: 10px; }
 .modul__kat { font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--beere); }
