@@ -1,0 +1,34 @@
+---
+import { render } from 'astro:content';
+export interface Props { ressource: any; }
+const { ressource } = Astro.props;
+const { Content } = await render(ressource);
+const d = ressource.data;
+const typLabel: Record<string, string> = {
+  studie: 'Studie',
+  bericht: 'Bericht',
+  artikel: 'Artikel',
+  podcast: 'Podcast',
+  video: 'Video',
+  webinar: 'Webinar',
+  toolkit: 'Toolkit',
+  fachstelle: 'Fachstelle',
+};
+const bereichLabel: Record<string, string> = {
+  berufsintegration: 'Berufsintegration',
+  bildung: 'Bildung',
+  beratung: 'Beratung',
+  uebergreifend: 'Übergreifend',
+};
+---
+<article class="ressource">
+  <div class="ressource__meta">
+    <span class="chip chip--gruen">{typLabel[d.typ] ?? d.typ}</span>
+    {d.kostenlos && <span class="chip">kostenlos</span>}
+    <span>{bereichLabel[d.bereich]}{d.datumLabel ? ` · ${d.datumLabel}` : ''}</span>
+  </div>
+  <h4 class="ressource__titel"><a href={d.url} target="_blank" rel="noopener">{d.titel} →</a></h4>
+  <p class="ressource__quelle">{d.quelle}</p>
+  <p class="ressource__warum">{d.warum}</p>
+  <div class="ressource__text"><Content /></div>
+</article>

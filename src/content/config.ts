@@ -55,4 +55,26 @@ const modul = defineCollection({
   }),
 });
 
-export const collections = { ausgaben, weiterbildungen, modul };
+// ── Fachimpulse & Ressourcen ────────────────────────────────────────────
+// Kostenlose, hilfreiche Quellen fürs Team: Studien, Berichte, Fachstellen,
+// Podcasts, Videos usw. Kein Kurs – ein Direktlink mit kurzer Einordnung.
+const ressourcen = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/ressourcen' }),
+  schema: z.object({
+    titel: z.string(),
+    typ: z.enum([
+      'studie', 'bericht', 'artikel', 'podcast', 'video', 'webinar', 'toolkit', 'fachstelle',
+    ]),
+    quelle: z.string(),                // Herausgeberin / Kanal
+    bereich: z.enum([
+      'berufsintegration', 'bildung', 'beratung', 'uebergreifend',
+    ]),
+    ausgabe: z.string(),               // Slug der Ausgabe, z. B. "2026-07"
+    url: z.string().url(),             // Direktlink zur Quelle
+    datumLabel: z.string().optional(), // z. B. "2024" oder "Folge 42, 2026"
+    kostenlos: z.boolean().default(true),
+    warum: z.string(),                 // 1 Satz: was es im Job konkret bringt
+  }),
+});
+
+export const collections = { ausgaben, weiterbildungen, modul, ressourcen };
