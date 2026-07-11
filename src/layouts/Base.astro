@@ -16,7 +16,7 @@ const {
   markeText = 'Archiv',
 } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const logo = 'https://www.futurx.ch/fileadmin/assets/img/logo.png';
+const logo = `${base}/logo.png`;
 ---
 <!doctype html>
 <html lang="de">
@@ -32,7 +32,7 @@ const logo = 'https://www.futurx.ch/fileadmin/assets/img/logo.png';
   <div class="seite">
     <div class="blatt">
       <div class="marke">
-        <a href={`${base}/`} aria-label="FuturX Startseite"><img class="marke__logo" src={logo} alt="FuturX" height="28" /></a>
+        <a href={`${base}/`} aria-label="FuturX Startseite"><img class="marke__logo" src={logo} alt="FuturX" height="40" /></a>
         <a class="marke__link" href={`${base}${markeTarget}`}>{markeText}</a>
       </div>
       <header class="hero">
