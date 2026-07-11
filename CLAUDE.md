@@ -152,22 +152,37 @@ Worten paraphrasieren, keinen Werbetext übernehmen. Keine Superlative, keine Em
 
 ## Ablauf einer Ausgabe
 
+**Grundprinzip: Der Mensch kuratiert, Claude schlägt vor.** Claude wählt nicht
+selbst aus. Es gibt eine klare Trennung in zwei Phasen mit einer Auswahl-Schranke
+dazwischen: erst Vorschlag, dann (nach der Auswahl des Menschen) Bauen.
+
 1. Repo-Stand von `main` lesen: dieses CLAUDE.md, die letzten Ausgaben, alle
    bestehenden Inhaltsdateien.
-2. Google Drive lesen (interne Grundlagen, Modulverlauf, Themenwünsche).
+2. Google Drive lesen: interne Grundlagen, Themenwünsche, **das Entscheidungslog und
+   die Präferenzen** (was der Mensch mag/nicht mag, was ausdrücklich ausgeschlossen ist).
 3. Recherchieren: Gmail-Newsletter im verbundenen Konto (nur Newsletter, nichts
-   verändern/senden) und die Quellen aus `docs/QUELLEN.md` bzw. bekannte Anbieter.
-4. Auswählen und verifizieren nach den Regeln oben.
-5. Neue Ausgabe unter `src/content/ausgaben/JJJJ-MM.md` anlegen, Inhalte als
-   einzelne Dateien in den Collections.
-6. `npm install` und `npm run build` müssen fehlerfrei durchlaufen (der Build prüft
-   das Datenmodell und die Budgetgrenze). Fehler vor der Übergabe beheben.
-7. Branch `radar/JJJJ-MM` erstellen, committen, pushen, Pull Request gegen `main`.
-   Nicht selbst mergen.
-8. Im Pull Request: kurze Inhaltsübersicht, die stärksten 3–5 Fundstücke, Zahl der
-   wegen Wiederholung ausgeschlossenen Angebote, Punkte für die menschliche Prüfung.
-9. In Google Drive die vier gewählten Modulimpulse mit Status „Vorgeschlagen"
-   ergänzen (bestehende Zeilen nicht verändern).
+   verändern/senden) und bekannte Anbieter/Webquellen. Breit streuen.
+4. **Vorschlagsliste erstellen (nicht selbst auswählen):** eine bewusst *diverse*
+   Auswahl – mehr Angebote als am Ende nötig – je Angebot verifiziert (Titel, Anbieter,
+   Datum, Preis, Link). **Nach Bereich geordnet** (Berufsintegration · Bildung ·
+   Beratung · Ressourcen), damit der Mensch schnell den Überblick hat. Auch beim letzten
+   Mal nicht gewählte, aber nicht ausgeschlossene Angebote dürfen erneut vorkommen.
+5. **Dem Menschen zur Auswahl vorlegen und warten.** Der Mensch akzeptiert oder
+   verwirft pro Angebot. **Vor der Auswahl wird nichts gebaut.** (Die automatische
+   Routine erzeugt nur die Vorschlagsliste und stoppt; das Bauen ist ein separater,
+   vom Menschen ausgelöster Schritt.)
+6. **Entscheide in Drive festhalten** (Entscheidungslog): je Angebot Status
+   (`Vorgeschlagen` / `Gewählt` / `Abgelehnt` / `Ausgeschlossen`) mit Datum. Abgelehnte
+   dürfen später wieder vorgeschlagen werden – ausser der Mensch schliesst sie
+   ausdrücklich aus. Präferenzen über die Zeit lernen und im nächsten Vorschlag besser
+   treffen.
+7. **Erst nach der Auswahl bauen:** gewählte Inhalte als Dateien in den Collections
+   anlegen, neue Ausgabe unter `src/content/ausgaben/JJJJ-MM.md`. `npm install` und
+   `npm run build` müssen fehlerfrei durchlaufen (Datenmodell- und Budgetprüfung).
+8. Branch `radar/JJJJ-MM`, committen, pushen, Pull Request gegen `main`. Nur auf
+   ausdrückliche Anweisung des Menschen mergen (siehe Grenzen der Automation).
+9. Im Pull Request: kurze Inhaltsübersicht, die stärksten Fundstücke, wegen
+   Wiederholung ausgeschlossene Angebote, Punkte für die menschliche Prüfung.
 
 ## Repository-Fakten
 
