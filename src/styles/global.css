@@ -131,6 +131,19 @@ details[open] > summary [data-chev] { transform: rotate(180deg); }
 .modul__body p { margin: 0; font-size: 12.5px; color: var(--text); }
 .modul__body a { color: var(--beere); font-weight: 600; }
 
+/* Fachimpulse & Ressourcen ----------------------------------------- */
+.ressourcen { margin-top: 34px; }
+.ressourcen__sub { margin: 12px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--text2); max-width: 52ch; }
+.ressource { margin-top: 12px; background: #fff; border: 2px solid var(--tinte); border-radius: 3px; padding: 16px 18px; box-shadow: 4px 4px 0 var(--tinte); }
+.ressource:first-of-type { margin-top: 16px; }
+.ressource__meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--text2); font-weight: 500; }
+.ressource__titel { margin: 9px 0 0; font-weight: 700; font-size: 17px; line-height: 1.2; }
+.ressource__titel a { color: var(--tinte); transition: color .12s; }
+.ressource__titel a:hover { color: var(--beere); }
+.ressource__quelle { margin: 4px 0 0; font-size: 12.5px; color: var(--text2); font-weight: 500; }
+.ressource__warum { margin: 8px 0 0; font-size: 13.5px; line-height: 1.55; color: var(--text); font-weight: 600; }
+.ressource__text p { margin: 6px 0 0; font-size: 13.5px; line-height: 1.6; color: var(--text); }
+
 /* Fuss / Navigation / Archiv --------------------------------------- */
 .fuss { margin: 22px 0 0; font-size: 11.5px; color: var(--grau); font-weight: 500; }
 .nav { margin-top: 22px; }

@@ -73,8 +73,14 @@ Niemals Personen-, Teilnehmenden- oder Evaluationsdaten in dieses Repo schreiben
 - **Modulimpuls** (`src/content/module/*.md`): titel, ausgabe, kategorie
   (`gesellschaft-schweiz|psychologie-gesundheit|beruf-alltag|technik-jugendkultur`),
   teaser, warum[], zugaenge[3–5], verbindungen[], quellen[2–4 {label,url}].
+- **Ressource** (`src/content/ressourcen/*.md`): titel, typ
+  (`studie|bericht|artikel|podcast|video|webinar|toolkit|fachstelle`), quelle,
+  bereich (`berufsintegration|bildung|beratung|uebergreifend`), ausgabe (Slug), url,
+  datumLabel (optional), kostenlos (bool, i. d. R. true), warum (1 Satz). Body =
+  kurze Einordnung. Kostenlose, hilfreiche Quellen fürs Team, kein Kurs.
 
-IDs/Dateinamen eindeutig, Schema z. B. `wb-JJJJ-MM-NN.md`, `mod-JJJJ-MM-NN.md`.
+IDs/Dateinamen eindeutig, Schema z. B. `wb-JJJJ-MM-NN.md`, `mod-JJJJ-MM-NN.md`,
+`res-JJJJ-MM-NN.md`.
 Daten immer ISO (`YYYY-MM-DD`). `featured: true` sparsam (1–3 pro Bereich).
 
 Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
@@ -117,6 +123,18 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
 - **Wiederholung prüfen** gegen die interne Liste in Google Drive und gegen frühere
   Impulse im Repo (Titel, Kernthema, Schlagwörter, Zugang). Ein Thema darf erneut
   vorkommen, wenn der Zugang klar anders ist.
+
+## Auswahlregeln Ressourcen (Fachimpulse)
+
+- **Zweck:** kostenlose, hilfreiche Quellen, die das Team im Job besser machen –
+  Studien, Berichte, Fachstellen, gute Podcasts oder Videos. Kein Kurs, keine Werbung.
+- **Menge:** etwa 4–6 pro Ausgabe, über die Bereiche und über verschiedene `typ`
+  gestreut (nicht nur Berichte).
+- **Kostenlos** und frei zugänglich; hinter Paywall oder Login weglassen.
+- **Nichts erfinden:** nur mit verifiziertem Titel, Quelle und funktionierendem Link.
+  Bei Podcast/Video die Reputation prüfen (seriöse Herausgeberin oder nachweisbare
+  Reichweite/Bewertung); reisserische oder unbelegte Beiträge weglassen.
+- Schweizbezug bevorzugen; `warum` in einem Satz konkret auf den Arbeitsnutzen.
 
 ## Wiederholungsregel allgemein
 

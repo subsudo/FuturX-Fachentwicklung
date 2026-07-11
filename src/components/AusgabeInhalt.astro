@@ -3,12 +3,14 @@ import { getCollection } from 'astro:content';
 import KursKarte from './KursKarte.astro';
 import KursEintrag from './KursEintrag.astro';
 import ModulImpuls from './ModulImpuls.astro';
+import RessourcenEintrag from './RessourcenEintrag.astro';
 
 export interface Props { ausgabeSlug: string; }
 const { ausgabeSlug } = Astro.props;
 
 const alleKurse = await getCollection('weiterbildungen', (e) => e.data.ausgabe === ausgabeSlug);
 const alleModule = await getCollection('modul', (e) => e.data.ausgabe === ausgabeSlug);
+const alleRessourcen = await getCollection('ressourcen', (e) => e.data.ausgabe === ausgabeSlug);
 
 const bereiche = [
   { key: 'berufsintegration', label: 'Berufsintegration' },
@@ -42,5 +44,13 @@ const sichtbar = bereiche
     <div class="module__grid">
       {alleModule.map((m) => <ModulImpuls modul={m} />)}
     </div>
+  </section>
+)}
+
+{alleRessourcen.length > 0 && (
+  <section class="ressourcen">
+    <span class="bereich-label">Fachimpulse &amp; Ressourcen</span>
+    <p class="ressourcen__sub">Kostenlose Quellen fürs Team: Studien, Berichte, Fachstellen und Beiträge, die im Arbeitsalltag weiterhelfen.</p>
+    {alleRessourcen.map((r) => <RessourcenEintrag ressource={r} />)}
   </section>
 )}
