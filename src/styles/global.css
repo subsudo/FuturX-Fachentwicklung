@@ -47,7 +47,7 @@ details[open] > summary [data-chev] { transform: rotate(180deg); }
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   padding: 16px 34px; border-bottom: 2px solid var(--tinte); background: var(--blatt);
 }
-.marke__logo { height: 28px; width: auto; display: block; }
+.marke__logo { height: 40px; width: auto; display: block; }
 .marke__link {
   font-size: 12px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase;
   color: var(--tinte); background: #fff; border: 2px solid var(--tinte);
