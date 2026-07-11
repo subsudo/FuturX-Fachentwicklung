@@ -1,0 +1,148 @@
+/* ══════════════════════════════════════════════════════════════════
+   FuturX-Fachentwicklungsradar – Zine-Design
+   Neo-brutalistisch: harte Ränder, versetzte Schatten.
+   Marke: Lindgrün #9DC200 · Beere #A12061 · Tinte #191917
+   ══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --bg: #d8d7cf;      /* Seite (warmes Grau) */
+  --blatt: #f4f2ea;   /* Blatt (creme) */
+  --tinte: #191917;   /* Fast-Schwarz */
+  --lind: #9DC200;
+  --beere: #A12061;
+  --chip: #eef4d8;    /* Tag-Hintergrund grün */
+  --text: #3d3d37;
+  --text2: #55554d;
+  --grau: #8a8a80;
+  --kopf: #26310a;    /* Text auf Lindgrün */
+  --font: 'Space Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: var(--font); line-height: 1.6;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+a { text-decoration: none; }
+summary { list-style: none; }
+summary::-webkit-details-marker { display: none; }
+[data-chev] { transition: transform .2s ease; }
+details[open] > summary [data-chev] { transform: rotate(180deg); }
+:focus-visible { outline: 3px solid var(--beere); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* Rahmen ----------------------------------------------------------- */
+.seite { padding: 44px 24px; }
+.blatt {
+  max-width: 720px; margin: 0 auto; background: var(--blatt);
+  border: 2px solid var(--tinte); border-radius: 4px; overflow: hidden;
+  box-shadow: 10px 10px 0 var(--tinte);
+}
+@media (max-width: 560px) { .seite { padding: 20px 14px; } }
+
+/* Markenband ------------------------------------------------------- */
+.marke {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 16px 34px; border-bottom: 2px solid var(--tinte); background: var(--blatt);
+}
+.marke__logo { height: 28px; width: auto; display: block; }
+.marke__link {
+  font-size: 12px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase;
+  color: var(--tinte); background: #fff; border: 2px solid var(--tinte);
+  border-radius: 2px; padding: 5px 11px; box-shadow: 2px 2px 0 var(--tinte);
+  transition: background .12s;
+}
+.marke__link:hover { background: var(--lind); }
+
+/* Hero (Lindgrün) -------------------------------------------------- */
+.hero { padding: 34px 34px 30px; border-bottom: 2px solid var(--tinte); background: var(--lind); }
+.hero__eyebrow {
+  display: inline-block; background: var(--tinte); color: #fff;
+  font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 2px;
+}
+.hero h1 {
+  margin: 16px 0 0; font-weight: 700; font-size: clamp(34px, 9vw, 52px);
+  line-height: .95; letter-spacing: -.03em; color: var(--tinte); hyphens: manual;
+}
+.hero__teaser { margin: 16px 0 0; font-size: 16px; line-height: 1.5; color: var(--kopf); font-weight: 500; max-width: 46ch; }
+
+/* Korpus ----------------------------------------------------------- */
+.korpus { padding: 30px 34px 34px; }
+@media (max-width: 560px) { .hero, .korpus, .marke { padding-left: 20px; padding-right: 20px; } }
+
+/* Bereich ---------------------------------------------------------- */
+.bereich { margin-top: 30px; }
+.bereich:first-of-type { margin-top: 0; }
+.bereich-label {
+  display: inline-block; background: var(--beere); color: #fff; border: 2px solid var(--tinte);
+  font-weight: 700; font-size: 15px; letter-spacing: .02em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 2px; box-shadow: 3px 3px 0 var(--tinte);
+}
+
+/* Empfehlungskarte ------------------------------------------------- */
+.karte {
+  margin-top: 16px; background: #fff; border: 2px solid var(--tinte);
+  border-radius: 3px; padding: 20px; box-shadow: 5px 5px 0 var(--tinte);
+}
+.karte.abgelaufen { opacity: .55; }
+.karte__titel { margin: 0; font-weight: 700; font-size: 21px; line-height: 1.15; color: var(--tinte); }
+.meta { margin: 11px 0 0; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 12.5px; color: var(--text2); font-weight: 500; }
+.chip { background: #fff; border: 1.5px solid var(--tinte); font-weight: 700; padding: 2px 9px; border-radius: 2px; }
+.chip--gruen { background: var(--chip); }
+.tag-ab { background: #e7e7e0; border: 1.5px solid var(--tinte); font-weight: 700; padding: 2px 9px; border-radius: 2px; color: var(--text2); }
+.karte__text { margin: 12px 0 0; }
+.karte__text p { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--text); }
+.btn {
+  display: inline-block; margin-top: 14px; background: var(--tinte); color: #fff;
+  font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .03em;
+  padding: 10px 16px; border-radius: 2px; transition: background .15s;
+}
+.btn:hover { background: var(--beere); }
+
+/* Folgeangebot (Akkordeon) ----------------------------------------- */
+.eintrag { margin-top: 10px; background: #fff; border: 2px solid var(--tinte); border-radius: 3px; overflow: hidden; }
+.eintrag:first-of-type { margin-top: 12px; }
+.eintrag > summary { cursor: pointer; padding: 13px 15px; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.eintrag__titel { font-weight: 700; font-size: 14.5px; color: var(--tinte); }
+.eintrag__meta { font-size: 12px; color: var(--text2); margin-top: 2px; font-weight: 500; }
+.eintrag__body { padding: 0 15px 15px; }
+.eintrag__body p { margin: 0 0 10px; font-size: 13.5px; line-height: 1.6; color: var(--text); }
+.link-beere { color: var(--beere); font-weight: 700; font-size: 13px; }
+.chev { color: var(--beere); font-size: 13px; }
+
+/* Modulblock ------------------------------------------------------- */
+.module { margin-top: 34px; background: var(--tinte); border: 2px solid var(--tinte); border-radius: 3px; padding: 24px; box-shadow: 6px 6px 0 var(--lind); }
+.module h2 { margin: 0; font-weight: 700; font-size: 28px; letter-spacing: -.02em; color: #fff; }
+.module__sub { margin: 5px 0 18px; font-size: 13.5px; color: #c9c9c2; }
+.module__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+@media (max-width: 600px) { .module__grid { grid-template-columns: 1fr; } }
+.modul { background: var(--blatt); border-radius: 3px; overflow: hidden; }
+.modul > summary { cursor: pointer; padding: 15px; }
+.modul__kopf { display: flex; justify-content: space-between; gap: 10px; }
+.modul__kat { font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--beere); }
+.modul__titel { margin: 6px 0 5px; font-weight: 700; font-size: 16px; line-height: 1.15; color: var(--tinte); }
+.modul__teaser { margin: 0; font-size: 12px; line-height: 1.5; color: var(--text2); }
+.modul__body { padding: 0 15px 15px; }
+.modul__body h5 { margin: 12px 0 4px; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--grau); }
+.modul__body ul { margin: 0; padding-left: 16px; font-size: 12.5px; line-height: 1.55; color: var(--text); }
+.modul__body p { margin: 0; font-size: 12.5px; color: var(--text); }
+.modul__body a { color: var(--beere); font-weight: 600; }
+
+/* Fuss / Navigation / Archiv --------------------------------------- */
+.fuss { margin: 22px 0 0; font-size: 11.5px; color: var(--grau); font-weight: 500; }
+.nav { margin-top: 22px; }
+.nav a { color: var(--beere); font-weight: 700; font-size: 14px; }
+.archiv { list-style: none; padding: 0; margin: 0; }
+.archiv li { margin-top: 12px; }
+.archiv li:first-child { margin-top: 0; }
+.archiv a {
+  display: flex; justify-content: space-between; gap: 12px; align-items: center;
+  background: #fff; border: 2px solid var(--tinte); border-radius: 3px; padding: 14px 16px;
+  box-shadow: 4px 4px 0 var(--tinte); color: var(--tinte); transition: box-shadow .12s, transform .12s;
+}
+.archiv a:hover { box-shadow: 2px 2px 0 var(--tinte); transform: translate(2px, 2px); }
+.archiv__titel { font-weight: 700; font-size: 16px; }
+.archiv__datum { font-size: 12px; color: var(--text2); font-weight: 600; white-space: nowrap; }

@@ -1,0 +1,21 @@
+---
+import { render } from 'astro:content';
+export interface Props { kurs: any; }
+const { kurs } = Astro.props;
+const { Content } = await render(kurs);
+const d = kurs.data;
+const abgelaufen = d.enddatum ? d.enddatum < new Date() : false;
+---
+<details class={`eintrag${abgelaufen ? ' abgelaufen' : ''}`}>
+  <summary>
+    <div>
+      <div class="eintrag__titel">{d.titel}{abgelaufen && <span class="tag-ab" style="margin-left:8px">Abgelaufen</span>}</div>
+      <div class="eintrag__meta">{d.anbieter} · {d.datumLabel} · {d.ort} · CHF&nbsp;{d.preisChf}</div>
+    </div>
+    <span data-chev class="chev">▾</span>
+  </summary>
+  <div class="eintrag__body">
+    <Content />
+    {!abgelaufen && <a href={d.url} target="_blank" rel="noopener" class="link-beere">Zur Ausschreibung →</a>}
+  </div>
+</details>

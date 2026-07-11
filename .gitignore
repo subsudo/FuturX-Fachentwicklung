@@ -1,0 +1,15 @@
+# Abhängigkeiten
+node_modules/
+
+# Build-Ausgabe
+dist/
+.astro/
+
+# Umgebung / Secrets (NIE committen)
+.env
+.env.*
+
+# System
+.DS_Store
+Thumbs.db
+*.log

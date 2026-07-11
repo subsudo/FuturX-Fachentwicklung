@@ -1,0 +1,33 @@
+---
+export interface Props { modul: any; }
+const { modul } = Astro.props;
+const d = modul.data;
+const katLabel: Record<string, string> = {
+  'gesellschaft-schweiz': 'Gesellschaft & Schweiz',
+  'psychologie-gesundheit': 'Psychologie & Gesundheit',
+  'beruf-alltag': 'Beruf & Alltag',
+  'technik-jugendkultur': 'Technik & Jugendkultur',
+};
+---
+<details class="modul">
+  <summary>
+    <div class="modul__kopf">
+      <span class="modul__kat">{katLabel[d.kategorie]}</span>
+      <span data-chev class="chev" style="color:#8a8a80">▾</span>
+    </div>
+    <h4 class="modul__titel">{d.titel}</h4>
+    <p class="modul__teaser">{d.teaser}</p>
+  </summary>
+  <div class="modul__body">
+    <h5>Warum das Thema funktionieren könnte</h5>
+    <ul>{d.warum.map((w: string) => <li>{w}</li>)}</ul>
+    <h5>Mögliche Zugänge</h5>
+    <ul>{d.zugaenge.map((z: string) => <li>{z}</li>)}</ul>
+    <h5>Verbindungen</h5>
+    <p>{d.verbindungen.join(' · ')}</p>
+    <h5>Zum Vertiefen</h5>
+    <ul>{d.quellen.map((q: { label: string; url: string }) => (
+      <li><a href={q.url} target="_blank" rel="noopener">{q.label} →</a></li>
+    ))}</ul>
+  </div>
+</details>

@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import AusgabeInhalt from '../../components/AusgabeInhalt.astro';
+
+export async function getStaticPaths() {
+  const ausgaben = await getCollection('ausgaben');
+  return ausgaben.map((a) => ({ params: { slug: a.id }, props: { ausgabe: a } }));
+}
+
+const { ausgabe } = Astro.props;
+const d = ausgabe.data;
+---
+<Base title={`FuturX-Fachentwicklungsradar – ${d.monatLabel}`} markeTarget="/archiv" markeText="Archiv">
+  <Fragment slot="hero">
+    <span class="hero__eyebrow">Ausgabe {d.monatLabel}</span>
+    <h1 set:html="Fachentwicklungs&shy;radar" />
+    <p class="hero__teaser">{d.einleitung}</p>
+  </Fragment>
+
+  <AusgabeInhalt ausgabeSlug={ausgabe.id} />
+</Base>

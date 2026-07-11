@@ -1,0 +1,48 @@
+---
+import '@fontsource/space-grotesk/400.css';
+import '@fontsource/space-grotesk/500.css';
+import '@fontsource/space-grotesk/700.css';
+import '../styles/global.css';
+export interface Props {
+  title: string;
+  beschreibung?: string;
+  markeTarget?: string;
+  markeText?: string;
+}
+const {
+  title,
+  beschreibung = 'Kuratierte Weiterbildungen und Modulimpulse für FuturX.',
+  markeTarget = '/archiv',
+  markeText = 'Archiv',
+} = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const logo = 'https://www.futurx.ch/fileadmin/assets/img/logo.png';
+---
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content={beschreibung} />
+  <title>{title}</title>
+</head>
+<body>
+  <div class="seite">
+    <div class="blatt">
+      <div class="marke">
+        <a href={`${base}/`} aria-label="FuturX Startseite"><img class="marke__logo" src={logo} alt="FuturX" height="28" /></a>
+        <a class="marke__link" href={`${base}${markeTarget}`}>{markeText}</a>
+      </div>
+      <header class="hero">
+        <slot name="hero" />
+      </header>
+      <div class="korpus">
+        <slot />
+        <p class="fuss">Genossenschaft FuturX · Grossmatte Ost 26 · 6014 Luzern · Fachentwicklungsradar · intern kuratiert</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

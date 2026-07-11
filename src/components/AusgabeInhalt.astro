@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import KursKarte from './KursKarte.astro';
+import KursEintrag from './KursEintrag.astro';
+import ModulImpuls from './ModulImpuls.astro';
+
+export interface Props { ausgabeSlug: string; }
+const { ausgabeSlug } = Astro.props;
+
+const alleKurse = await getCollection('weiterbildungen', (e) => e.data.ausgabe === ausgabeSlug);
+const alleModule = await getCollection('modul', (e) => e.data.ausgabe === ausgabeSlug);
+
+const bereiche = [
+  { key: 'berufsintegration', label: 'Berufsintegration' },
+  { key: 'bildung', label: 'Bildung & Lehrbegleitung' },
+  { key: 'beratung', label: 'Beratung' },
+] as const;
+
+const sichtbar = bereiche
+  .map((b) => {
+    const liste = alleKurse.filter((k) => k.data.bereich === b.key);
+    return {
+      ...b,
+      featured: liste.filter((k) => k.data.featured),
+      weitere: liste.filter((k) => !k.data.featured),
+    };
+  })
+  .filter((b) => b.featured.length + b.weitere.length > 0);
+---
+{sichtbar.map((b, i) => (
+  <section class="bereich">
+    <span class="bereich-label">{String(i + 1).padStart(2, '0')} · {b.label}</span>
+    {b.featured.map((k) => <KursKarte kurs={k} />)}
+    {b.weitere.map((k) => <KursEintrag kurs={k} />)}
+  </section>
+))}
+
+{alleModule.length > 0 && (
+  <section class="module">
+    <h2>Modulimpulse</h2>
+    <p class="module__sub">Vier Themen für den Unterricht – aufklappen für Zugänge und Quellen.</p>
+    <div class="module__grid">
+      {alleModule.map((m) => <ModulImpuls modul={m} />)}
+    </div>
+  </section>
+)}
