@@ -28,12 +28,22 @@ const sichtbar = bereiche
     };
   })
   .filter((b) => b.featured.length + b.weitere.length > 0);
+
+// Fortlaufende Nummer über alle sichtbaren Weiterbildungen (Empfehlung zuerst)
+let lauf = 0;
+const nummerFor = new Map<string, string>();
+for (const b of sichtbar) {
+  for (const k of [...b.featured, ...b.weitere]) {
+    lauf += 1;
+    nummerFor.set(k.id, String(lauf).padStart(2, '0'));
+  }
+}
 ---
 {sichtbar.map((b, i) => (
   <section class="bereich">
     <span class="bereich-label">{String(i + 1).padStart(2, '0')} · {b.label}</span>
-    {b.featured.map((k) => <KursKarte kurs={k} />)}
-    {b.weitere.map((k) => <KursEintrag kurs={k} />)}
+    {b.featured.map((k) => <KursKarte kurs={k} nummer={nummerFor.get(k.id)} />)}
+    {b.weitere.map((k) => <KursEintrag kurs={k} nummer={nummerFor.get(k.id)} />)}
   </section>
 ))}
 

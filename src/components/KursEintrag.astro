@@ -1,16 +1,22 @@
 ---
 import { render } from 'astro:content';
-export interface Props { kurs: any; }
-const { kurs } = Astro.props;
+export interface Props { kurs: any; nummer?: string; }
+const { kurs, nummer } = Astro.props;
 const { Content } = await render(kurs);
 const d = kurs.data;
 const abgelaufen = d.enddatum ? d.enddatum < new Date() : false;
+const fmt: Record<string, string> = { praesenz: 'Präsenz', online: 'Online', hybrid: 'Hybrid' };
 ---
 <details class={`eintrag${abgelaufen ? ' abgelaufen' : ''}`}>
   <summary>
-    <div>
+    <span class="nr eintrag__nr">{nummer}</span>
+    <div class="eintrag__main">
       <div class="eintrag__titel">{d.titel}{abgelaufen && <span class="tag-ab" style="margin-left:8px">Abgelaufen</span>}</div>
-      <div class="eintrag__meta">{d.anbieter} · {d.datumLabel} · {d.ort} · CHF&nbsp;{d.preisChf}</div>
+      <div class="eintrag__chips">
+        <span class="chip--klein chip--gruen">{fmt[d.format] ?? 'Präsenz'}</span>
+        <span class="chip--klein">CHF&nbsp;{d.preisChf}</span>
+      </div>
+      <div class="eintrag__meta">{d.anbieter} · {d.datumLabel} · {d.ort}</div>
     </div>
     <span data-chev class="chev">▾</span>
   </summary>
