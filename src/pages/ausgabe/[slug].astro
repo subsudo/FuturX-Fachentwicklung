@@ -11,10 +11,10 @@ export async function getStaticPaths() {
 const { ausgabe } = Astro.props;
 const d = ausgabe.data;
 ---
-<Base title={`FuturX-Fachentwicklungsradar – ${d.monatLabel}`} markeTarget="/archiv" markeText="Archiv">
+<Base title={`FuturX · Weiterbildungen & Impulse – ${d.monatLabel}`} markeTarget="/archiv" markeText="Archiv">
   <Fragment slot="hero">
     <span class="hero__eyebrow">Ausgabe {d.monatLabel}</span>
-    <h1 set:html="Fachentwicklungs&shy;radar" />
+    <h1 set:html="Weiter&shy;bildungen &amp; Impulse" />
     <p class="hero__teaser">{d.einleitung}</p>
   </Fragment>
 

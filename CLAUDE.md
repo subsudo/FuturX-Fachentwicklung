@@ -1,4 +1,5 @@
-# CLAUDE.md – Arbeitsregeln für den FuturX-Fachentwicklungsradar
+# CLAUDE.md – Arbeitsregeln für FuturX «Weiterbildungen & Impulse»
+(Repository: FuturX-Fachentwicklung; intern früher «Fachentwicklungsradar», Kurzform «Radar»)
 
 Diese Datei ist verbindlich. Sie beschreibt, was FuturX ist, wie Inhalte
 ausgewählt werden und wie eine neue Ausgabe technisch entsteht. Bei jedem Lauf
