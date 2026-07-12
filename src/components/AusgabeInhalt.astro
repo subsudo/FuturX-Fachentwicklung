@@ -8,7 +8,8 @@ import RessourcenEintrag from './RessourcenEintrag.astro';
 export interface Props { ausgabeSlug: string; }
 const { ausgabeSlug } = Astro.props;
 
-const alleKurse = await getCollection('weiterbildungen', (e) => e.data.ausgabe === ausgabeSlug);
+const alleKurse = (await getCollection('weiterbildungen', (e) => e.data.ausgabe === ausgabeSlug))
+  .sort((a, b) => a.id.localeCompare(b.id));
 const alleModule = await getCollection('modul', (e) => e.data.ausgabe === ausgabeSlug);
 const alleRessourcen = await getCollection('ressourcen', (e) => e.data.ausgabe === ausgabeSlug);
 
@@ -28,19 +29,29 @@ const sichtbar = bereiche
     };
   })
   .filter((b) => b.featured.length + b.weitere.length > 0);
+
+// Fortlaufende Nummer über alle sichtbaren Weiterbildungen (Empfehlung zuerst)
+let lauf = 0;
+const nummerFor = new Map<string, string>();
+for (const b of sichtbar) {
+  for (const k of [...b.featured, ...b.weitere]) {
+    lauf += 1;
+    nummerFor.set(k.id, String(lauf).padStart(2, '0'));
+  }
+}
 ---
 {sichtbar.map((b, i) => (
   <section class="bereich">
     <span class="bereich-label">{String(i + 1).padStart(2, '0')} · {b.label}</span>
-    {b.featured.map((k) => <KursKarte kurs={k} />)}
-    {b.weitere.map((k) => <KursEintrag kurs={k} />)}
+    {b.featured.map((k) => <KursKarte kurs={k} nummer={nummerFor.get(k.id)} />)}
+    {b.weitere.map((k) => <KursEintrag kurs={k} nummer={nummerFor.get(k.id)} />)}
   </section>
 ))}
 
 {alleModule.length > 0 && (
   <section class="module">
-    <h2>Modulimpulse</h2>
-    <p class="module__sub">Vier Themen für den Unterricht – aufklappen für Zugänge und Quellen.</p>
+    <h2>Modul-Ideen</h2>
+    <p class="module__sub">Vier Themen für den Modulunterricht.</p>
     <div class="module__grid">
       {alleModule.map((m) => <ModulImpuls modul={m} />)}
     </div>

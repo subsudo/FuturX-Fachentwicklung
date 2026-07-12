@@ -7,11 +7,11 @@ const ausgaben = (await getCollection('ausgaben')).sort(
   (a, b) => b.data.datum.getTime() - a.data.datum.getTime(),
 );
 ---
-<Base title="FuturX-Fachentwicklungsradar – Archiv" markeTarget="/" markeText="Aktuell">
+<Base title="FuturX · Weiterbildungen & Impulse – Archiv" markeTarget="/" markeText="Aktuell">
   <Fragment slot="hero">
     <span class="hero__eyebrow">Übersicht</span>
     <h1>Archiv</h1>
-    <p class="hero__teaser">Alle Ausgaben des Fachentwicklungsradars. Abgelaufene Kurse bleiben erhalten und sind markiert.</p>
+    <p class="hero__teaser">Alle Ausgaben von «Weiterbildungen & Impulse». Abgelaufene Kurse bleiben erhalten und sind markiert.</p>
   </Fragment>
 
   <ul class="archiv">

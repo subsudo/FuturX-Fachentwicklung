@@ -23,9 +23,9 @@ const bereichLabel: Record<string, string> = {
 ---
 <article class="ressource">
   <div class="ressource__meta">
-    <span class="chip chip--gruen">{typLabel[d.typ] ?? d.typ}</span>
-    {d.kostenlos && <span class="chip">kostenlos</span>}
-    <span>{bereichLabel[d.bereich]}{d.datumLabel ? ` · ${d.datumLabel}` : ''}</span>
+    <span class="chip--klein chip--gruen">{typLabel[d.typ] ?? d.typ}</span>
+    {d.kostenlos && <span class="chip--klein">kostenlos</span>}
+    <span class="ressource__wo">{bereichLabel[d.bereich]}{d.datumLabel ? ` · ${d.datumLabel}` : ''}</span>
   </div>
   <h4 class="ressource__titel"><a href={d.url} target="_blank" rel="noopener">{d.titel} →</a></h4>
   <p class="ressource__quelle">{d.quelle}</p>

@@ -1,21 +1,26 @@
 ---
 import { render } from 'astro:content';
-export interface Props { kurs: any; }
-const { kurs } = Astro.props;
+export interface Props { kurs: any; nummer?: string; }
+const { kurs, nummer } = Astro.props;
 const { Content } = await render(kurs);
 const d = kurs.data;
 const abgelaufen = d.enddatum ? d.enddatum < new Date() : false;
 const fmt: Record<string, string> = { praesenz: 'Präsenz', online: 'Online', hybrid: 'Hybrid' };
 ---
 <article class={`karte${abgelaufen ? ' abgelaufen' : ''}`}>
-  <h3 class="karte__titel">{d.titel}</h3>
-  <div class="meta">
-    {abgelaufen
-      ? <span class="tag-ab">Abgelaufen</span>
-      : <span class="chip chip--gruen">{fmt[d.format] ?? 'Präsenz'}</span>}
-    <span class="chip">CHF&nbsp;{d.preisChf}</span>
-    <span>{d.anbieter} · {d.datumLabel} · {d.ort}</span>
+  <div class="karte__row">
+    <span class="nr karte__nr">{nummer}</span>
+    <div class="karte__main">
+      <h3 class="karte__titel">{d.titel}</h3>
+      <div class="meta">
+        {abgelaufen
+          ? <span class="tag-ab">Abgelaufen</span>
+          : <span class="chip chip--gruen">{fmt[d.format] ?? 'Präsenz'}</span>}
+        <span class="chip">CHF&nbsp;{d.preisChf}</span>
+      </div>
+      <p class="karte__wo">{d.anbieter} · {d.datumLabel} · {d.ort}</p>
+      <div class="karte__text"><Content /></div>
+      {!abgelaufen && <a class="btn" href={d.url} target="_blank" rel="noopener">Zur Ausschreibung →</a>}
+    </div>
   </div>
-  <div class="karte__text"><Content /></div>
-  {!abgelaufen && <a class="btn" href={d.url} target="_blank" rel="noopener">Zur Ausschreibung →</a>}
 </article>

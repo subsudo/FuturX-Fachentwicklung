@@ -1,4 +1,5 @@
-# CLAUDE.md – Arbeitsregeln für den FuturX-Fachentwicklungsradar
+# CLAUDE.md – Arbeitsregeln für FuturX «Weiterbildungen & Impulse»
+(Repository: FuturX-Fachentwicklung; intern früher «Fachentwicklungsradar», Kurzform «Radar»)
 
 Diese Datei ist verbindlich. Sie beschreibt, was FuturX ist, wie Inhalte
 ausgewählt werden und wie eine neue Ausgabe technisch entsteht. Bei jedem Lauf
@@ -104,8 +105,12 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
   KI-Angebote pro Ausgabe.**
 - **Verlinkung:** immer die **Kursdetailseite** (mit Datum, Preis, Anmeldung), nie
   ein Sammel-PDF oder Jahresflyer. Flyer nur als allerletzter Notnagel.
-- **Zeithorizont:** Kurse dürfen in der Zukunft liegen; entscheidend ist, dass die
-  Anmeldung noch offen ist. Abgelaufene oder ausgebuchte Angebote weglassen.
+- **Zeithorizont:** Kurse bevorzugt in den nächsten **~6 Monaten**. Weiter entfernte
+  Termine (bis fast ein Jahr) nur, wenn der Kurs erfahrungsgemäss **beliebt** ist und
+  eine **frühe Anmeldung** nötig ist – sonst weglassen. Anmeldung muss offen sein;
+  abgelaufene oder ausgebuchte Angebote weglassen.
+- **Keine Wiederholung:** bereits veröffentlichte oder gewählte Kurse nicht erneut
+  vorschlagen (siehe `docs/entscheidungslog.md` und Wiederholungsregel).
 - **Nichts erfinden:** nur Angebote mit verifiziertem Titel, Anbieter, Datum, Preis
   und Link. Fehlt ein Detail, Angebot weglassen statt raten.
 - **Menge:** etwa 6–10 Weiterbildungen pro Ausgabe, verteilt auf die Bereiche.
@@ -115,14 +120,23 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
 - **Genau vier Impulse pro Ausgabe**, je einer aus den vier Kategorien:
   Gesellschaft & Schweiz · Psychologie & Gesundheit · Beruf & Alltag ·
   Technik & Jugendkultur.
-- Lebensnah und relevant, dürfen fachlich anspruchsvoll sein. Persönliche Interessen
-  (Gaming, Sport, Filme) immer zu einem allgemeinbildenden Zugang weiterentwickeln,
-  nicht als isoliertes Thema.
+- **Lebensrelevant für die Jugendlichen** – möglichst nah an dem, was in der
+  Evaluation gewünscht wurde. Dürfen fachlich anspruchsvoll sein. Persönliche
+  Interessen (Gaming, Sport, Filme) immer zu einem allgemeinbildenden Zugang
+  weiterentwickeln, nicht als isoliertes Thema.
 - Jeder Impuls: kurzer Teaser, „warum" (1+), 3–5 Zugänge, mögliche Verbindungen,
   2–4 verlässliche Quellen. Kein ausgearbeitetes Unterrichtsmodul.
-- **Wiederholung prüfen** gegen die interne Liste in Google Drive und gegen frühere
-  Impulse im Repo (Titel, Kernthema, Schlagwörter, Zugang). Ein Thema darf erneut
-  vorkommen, wenn der Zugang klar anders ist.
+- **Themenabgleich mit der internen Liste** `2025_Liste Modul-Themen.xlsx` (OneDrive:
+  `OneDrive - Genossenschaft FuturX/Schule/Desktop/`; lokal les- und schreibbar):
+  - Spalte **„Gebucht von"** gefüllt = Thema **verbindlich ausgeschlossen** … ausser die
+    Person hat FuturX verlassen (**aktuell AF, NB**), dann ist das Thema wieder frei.
+  - Spalte **„LP"** (wer es angedacht hat) schliesst **nicht** aus.
+  - Die Spalte „Jahr" ist **nicht zuverlässig aktuell** – nicht als harte Grenze nutzen.
+    **Neue Themen bevorzugen**; sehr alte Module wieder aufzugreifen ist erlaubt, aber
+    nicht die erste Wahl.
+  - **Bei neuen Vorschlägen die Excel-Liste aktualisieren**, damit nichts doppelt kommt.
+  Zusätzlich gegen frühere Impulse im Repo prüfen; ein Thema darf erneut vorkommen,
+  wenn der Zugang klar anders ist.
 
 ## Auswahlregeln Ressourcen (Fachimpulse)
 
@@ -161,7 +175,7 @@ dazwischen: erst Vorschlag, dann (nach der Auswahl des Menschen) Bauen.
 2. Google Drive lesen: interne Grundlagen, Themenwünsche, **das Entscheidungslog und
    die Präferenzen** (was der Mensch mag/nicht mag, was ausdrücklich ausgeschlossen ist).
 3. Recherchieren: Gmail-Newsletter im verbundenen Konto (nur Newsletter, nichts
-   verändern/senden) und bekannte Anbieter/Webquellen. Breit streuen.
+   verändern/senden) und bekannte Anbieter/Webquellen (siehe `docs/quellen.md`). Breit streuen.
 4. **Vorschlagsliste erstellen (nicht selbst auswählen):** eine bewusst *diverse*
    Auswahl – mehr Angebote als am Ende nötig – je Angebot verifiziert (Titel, Anbieter,
    Datum, Preis, Link). **Nach Bereich geordnet** (Berufsintegration · Bildung ·
@@ -171,11 +185,12 @@ dazwischen: erst Vorschlag, dann (nach der Auswahl des Menschen) Bauen.
    verwirft pro Angebot. **Vor der Auswahl wird nichts gebaut.** (Die automatische
    Routine erzeugt nur die Vorschlagsliste und stoppt; das Bauen ist ein separater,
    vom Menschen ausgelöster Schritt.)
-6. **Entscheide in Drive festhalten** (Entscheidungslog): je Angebot Status
-   (`Vorgeschlagen` / `Gewählt` / `Abgelehnt` / `Ausgeschlossen`) mit Datum. Abgelehnte
-   dürfen später wieder vorgeschlagen werden – ausser der Mensch schliesst sie
-   ausdrücklich aus. Präferenzen über die Zeit lernen und im nächsten Vorschlag besser
-   treffen.
+6. **Entscheide im Repo festhalten** (`docs/entscheidungslog.md`): je Angebot Status.
+   **Wichtig:** Ein entfernter oder nicht gewählter Kurs heisst nur, dass dieser
+   *konkrete* Kurs nicht passte – das **Thema bleibt offen** und darf mit einem anderen
+   Angebot wieder vorkommen. Nur ein ausdrücklicher **Themen-Ausschluss** ist bindend.
+   Bereits **veröffentlichte** Kurse nicht erneut vorschlagen. Entscheide sind ein
+   Trend für bessere Top-Empfehlungen, kein harter Filter; Präferenzen dort pflegen.
 7. **Erst nach der Auswahl bauen:** gewählte Inhalte als Dateien in den Collections
    anlegen, neue Ausgabe unter `src/content/ausgaben/JJJJ-MM.md`. `npm install` und
    `npm run build` müssen fehlerfrei durchlaufen (Datenmodell- und Budgetprüfung).
@@ -190,3 +205,5 @@ dazwischen: erst Vorschlag, dann (nach der Auswahl des Menschen) Bauen.
 - Standardbranch: `main`
 - Ausgabe-Branches: `radar/JJJJ-MM`
 - Veröffentlichung: GitHub Actions → GitHub Pages (Workflow in `.github/workflows/`)
+- Entscheidungslog & Präferenzen: `docs/entscheidungslog.md` (im Repo, von Claude gepflegt)
+- Modulthemen-Liste: `2025_Liste Modul-Themen.xlsx` (OneDrive, lokal les- und schreibbar)

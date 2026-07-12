@@ -2,6 +2,8 @@
 import '@fontsource/space-grotesk/400.css';
 import '@fontsource/space-grotesk/500.css';
 import '@fontsource/space-grotesk/700.css';
+import '@fontsource/space-mono/400.css';
+import '@fontsource/space-mono/700.css';
 import '../styles/global.css';
 export interface Props {
   title: string;
@@ -11,7 +13,7 @@ export interface Props {
 }
 const {
   title,
-  beschreibung = 'Kuratierte Weiterbildungen und Modulimpulse für FuturX.',
+  beschreibung = 'Kuratierte Weiterbildungen, Modul-Ideen und Fachimpulse für FuturX.',
   markeTarget = '/archiv',
   markeText = 'Archiv',
 } = Astro.props;
@@ -40,7 +42,7 @@ const logo = `${base}/logo.png`;
       </header>
       <div class="korpus">
         <slot />
-        <p class="fuss">Genossenschaft FuturX · Grossmatte Ost 26 · 6014 Luzern · Fachentwicklungsradar · intern kuratiert</p>
+        <p class="fuss">Genossenschaft FuturX · Grossmatte Ost 26 · 6014 Luzern · Weiterbildungen &amp; Impulse · intern kuratiert</p>
       </div>
     </div>
   </div>

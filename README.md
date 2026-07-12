@@ -1,6 +1,6 @@
-# FuturX-Fachentwicklungsradar
+# FuturX – Weiterbildungen & Impulse
 
-Interne Website mit kuratierten Weiterbildungen und Modulimpulsen für FuturX.
+Interne Website mit kuratierten Weiterbildungen, Modul-Ideen und Fachimpulsen für FuturX.
 Statische Astro-Site, veröffentlicht über GitHub Pages. Der Link wird intern
 per Mail verteilt; die Seite ist auf `noindex` gestellt (nicht in Suchmaschinen).
 
