@@ -74,5 +74,8 @@ Regeln (siehe CLAUDE.md, Auswahlregeln Modulimpulse):
 - Spalte **„Gebucht von"** gefüllt → Thema **verbindlich ausgeschlossen** …
 - … **ausser** die Person hat FuturX verlassen (aktuell **AF**, **NB**) → Thema wieder frei.
 - Spalte **„LP"** (wer es angedacht hat) schliesst **nicht** aus.
-- Nach ~1 Jahr (Spalte Jahr) dürfen thematisch ähnliche Themen wieder vorkommen.
+- Die Spalte „Jahr" ist nicht zuverlässig aktuell – keine harte Grenze. **Neue Themen
+  bevorzugen**; sehr alte Module aufzugreifen ist erlaubt, aber nicht die erste Wahl.
 - Bei neuen Modulvorschlägen die Excel-Liste aktualisieren (Wiederholung vermeiden).
+
+Bekannte Weiterbildungs-Quellen: siehe `docs/quellen.md`.

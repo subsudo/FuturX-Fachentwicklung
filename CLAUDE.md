@@ -131,7 +131,9 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
   - Spalte **„Gebucht von"** gefüllt = Thema **verbindlich ausgeschlossen** … ausser die
     Person hat FuturX verlassen (**aktuell AF, NB**), dann ist das Thema wieder frei.
   - Spalte **„LP"** (wer es angedacht hat) schliesst **nicht** aus.
-  - Nach ~1 Jahr (Spalte Jahr) dürfen thematisch ähnliche Themen wieder vorkommen.
+  - Die Spalte „Jahr" ist **nicht zuverlässig aktuell** – nicht als harte Grenze nutzen.
+    **Neue Themen bevorzugen**; sehr alte Module wieder aufzugreifen ist erlaubt, aber
+    nicht die erste Wahl.
   - **Bei neuen Vorschlägen die Excel-Liste aktualisieren**, damit nichts doppelt kommt.
   Zusätzlich gegen frühere Impulse im Repo prüfen; ein Thema darf erneut vorkommen,
   wenn der Zugang klar anders ist.
@@ -173,7 +175,7 @@ dazwischen: erst Vorschlag, dann (nach der Auswahl des Menschen) Bauen.
 2. Google Drive lesen: interne Grundlagen, Themenwünsche, **das Entscheidungslog und
    die Präferenzen** (was der Mensch mag/nicht mag, was ausdrücklich ausgeschlossen ist).
 3. Recherchieren: Gmail-Newsletter im verbundenen Konto (nur Newsletter, nichts
-   verändern/senden) und bekannte Anbieter/Webquellen. Breit streuen.
+   verändern/senden) und bekannte Anbieter/Webquellen (siehe `docs/quellen.md`). Breit streuen.
 4. **Vorschlagsliste erstellen (nicht selbst auswählen):** eine bewusst *diverse*
    Auswahl – mehr Angebote als am Ende nötig – je Angebot verifiziert (Titel, Anbieter,
    Datum, Preis, Link). **Nach Bereich geordnet** (Berufsintegration · Bildung ·
