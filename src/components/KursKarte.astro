@@ -6,6 +6,7 @@ const { Content } = await render(kurs);
 const d = kurs.data;
 const abgelaufen = d.enddatum ? d.enddatum < new Date() : false;
 const fmt: Record<string, string> = { praesenz: 'Präsenz', online: 'Online', hybrid: 'Hybrid' };
+const preisLabel = d.preisChf === 0 ? 'kostenlos' : `CHF ${d.preisChf}`;
 ---
 <article class={`karte${abgelaufen ? ' abgelaufen' : ''}`}>
   <div class="karte__row">
@@ -16,9 +17,10 @@ const fmt: Record<string, string> = { praesenz: 'Präsenz', online: 'Online', hy
         {abgelaufen
           ? <span class="tag-ab">Abgelaufen</span>
           : <span class="chip chip--gruen">{fmt[d.format] ?? 'Präsenz'}</span>}
-        <span class="chip">CHF&nbsp;{d.preisChf}</span>
+        <span class="chip">{d.datumLabel}</span>
+        <span class="chip">{preisLabel}</span>
       </div>
-      <p class="karte__wo">{d.anbieter} · {d.datumLabel} · {d.ort}</p>
+      <p class="karte__wo">{d.anbieter} · {d.ort}</p>
       <div class="karte__text"><Content /></div>
       {!abgelaufen && <a class="btn" href={d.url} target="_blank" rel="noopener">Zur Ausschreibung →</a>}
     </div>
