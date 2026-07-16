@@ -21,14 +21,21 @@ const bereichLabel: Record<string, string> = {
   uebergreifend: 'Übergreifend',
 };
 ---
-<article class="ressource">
-  <div class="ressource__meta">
-    <span class="chip--klein chip--gruen">{typLabel[d.typ] ?? d.typ}</span>
-    {d.kostenlos && <span class="chip--klein">kostenlos</span>}
-    <span class="ressource__wo">{bereichLabel[d.bereich]}{d.datumLabel ? ` · ${d.datumLabel}` : ''}</span>
+<details class="eintrag">
+  <summary>
+    <div class="eintrag__main">
+      <div class="eintrag__titel">{d.titel}</div>
+      <div class="eintrag__chips">
+        <span class="chip--klein chip--gruen">{typLabel[d.typ] ?? d.typ}</span>
+        {d.kostenlos && <span class="chip--klein">kostenlos</span>}
+      </div>
+      <div class="eintrag__meta">{d.quelle} · {bereichLabel[d.bereich]}{d.datumLabel ? ` · ${d.datumLabel}` : ''}</div>
+    </div>
+    <span data-chev class="chev">▾</span>
+  </summary>
+  <div class="eintrag__body">
+    <p class="ressource__warum">{d.warum}</p>
+    <Content />
+    <a href={d.url} target="_blank" rel="noopener" class="link-beere">Zur Quelle →</a>
   </div>
-  <h4 class="ressource__titel"><a href={d.url} target="_blank" rel="noopener">{d.titel} →</a></h4>
-  <p class="ressource__quelle">{d.quelle}</p>
-  <p class="ressource__warum">{d.warum}</p>
-  <div class="ressource__text"><Content /></div>
-</article>
+</details>

@@ -71,6 +71,10 @@ Niemals Personen-, Teilnehmenden- oder Evaluationsdaten in dieses Repo schreiben
   (`berufsintegration|bildung|beratung`), ausgabe (Slug), url (Kursseite),
   datumLabel, enddatum (ISO, optional), ort, format (`praesenz|online|hybrid`),
   preisChf (max 400), featured (bool). Body = Beschreibung.
+  **datumLabel-Format:** `"<Datum>, <Zeit/Dauer>"` (z. B. `"26. September 2026,
+  ganztags"` oder `"25. August 2026, 18.30–20.00 Uhr"`) – die Website zeigt das
+  Datum als eigene Kachel und die Zeitangabe als Subtext; immer genau ein Komma
+  zwischen Datum und Zeit/Dauer verwenden.
 - **Modulimpuls** (`src/content/module/*.md`): titel, ausgabe, kategorie
   (`gesellschaft-schweiz|psychologie-gesundheit|beruf-alltag|technik-jugendkultur`),
   teaser, warum[], zugaenge[3–5], verbindungen[], quellen[2–4 {label,url}].
@@ -142,12 +146,21 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
 
 - **Zweck:** kostenlose, hilfreiche Quellen, die das Team im Job besser machen –
   Studien, Berichte, Fachstellen, gute Podcasts oder Videos. Kein Kurs, keine Werbung.
-- **Menge:** etwa 4–6 pro Ausgabe, über die Bereiche und über verschiedene `typ`
-  gestreut (nicht nur Berichte).
+- **Menge – weniger ist mehr:** etwa **3–4** pro Ausgabe, über die Bereiche und über
+  verschiedene `typ` gestreut (nicht nur Berichte). Lieber wenige, starke Empfehlungen
+  als eine lange Liste.
+- **Darstellung:** kompakt und aufklappbar (Akkordeon wie die Weiterbildungs-Folge-
+  einträge), nicht als grosse Karte.
+- **Quellen:** Web-/Fachrecherche UND die abonnierten **Gmail-Newsletter** (Hinweise
+  zu Neuerungen, Berichten, Fachartikeln zur Bildungslandschaft Schweiz). Beide nutzen.
 - **Kostenlos** und frei zugänglich; hinter Paywall oder Login weglassen.
 - **Nichts erfinden:** nur mit verifiziertem Titel, Quelle und funktionierendem Link.
   Bei Podcast/Video die Reputation prüfen (seriöse Herausgeberin oder nachweisbare
   Reichweite/Bewertung); reisserische oder unbelegte Beiträge weglassen.
+- **Wiederholung vermeiden:** dieselbe Empfehlung nie zweimal (Abgleich über
+  `docs/entscheidungslog.md` und URL/Titel). Dasselbe **Thema** frühestens nach ein
+  paar Ausgaben wieder aufgreifen, nicht direkt in der unmittelbar folgenden Ausgabe –
+  bewusst thematische Breite und Aktualität über die Ausgaben hinweg anstreben.
 - Schweizbezug bevorzugen; `warum` in einem Satz konkret auf den Arbeitsnutzen.
 
 ## Wiederholungsregel allgemein
@@ -172,10 +185,14 @@ dazwischen: erst Vorschlag, dann (nach der Auswahl des Menschen) Bauen.
 
 1. Repo-Stand von `main` lesen: dieses CLAUDE.md, die letzten Ausgaben, alle
    bestehenden Inhaltsdateien.
-2. Google Drive lesen: interne Grundlagen, Themenwünsche, **das Entscheidungslog und
-   die Präferenzen** (was der Mensch mag/nicht mag, was ausdrücklich ausgeschlossen ist).
+2. **Entscheidungslog und Präferenzen lesen** (`docs/entscheidungslog.md`, im Repo):
+   was der Mensch mag/nicht mag, was bereits veröffentlicht und was ausdrücklich
+   ausgeschlossen ist. Modulthemen zusätzlich mit der internen Excel-Liste abgleichen
+   (siehe Auswahlregeln Modulimpulse).
 3. Recherchieren: Gmail-Newsletter im verbundenen Konto (nur Newsletter, nichts
-   verändern/senden) und bekannte Anbieter/Webquellen (siehe `docs/quellen.md`). Breit streuen.
+   verändern/senden) – als Quelle sowohl für Weiterbildungen als auch für **Ressourcen**
+   (Berichte, Neuerungen, Fachartikel zur Bildungslandschaft Schweiz) – und bekannte
+   Anbieter/Webquellen (siehe `docs/quellen.md`). Breit streuen.
 4. **Vorschlagsliste erstellen (nicht selbst auswählen):** eine bewusst *diverse*
    Auswahl – mehr Angebote als am Ende nötig – je Angebot verifiziert (Titel, Anbieter,
    Datum, Preis, Link). **Nach Bereich geordnet** (Berufsintegration · Bildung ·
