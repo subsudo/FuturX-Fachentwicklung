@@ -71,6 +71,10 @@ Niemals Personen-, Teilnehmenden- oder Evaluationsdaten in dieses Repo schreiben
   (`berufsintegration|bildung|beratung`), ausgabe (Slug), url (Kursseite),
   datumLabel, enddatum (ISO, optional), ort, format (`praesenz|online|hybrid`),
   preisChf (max 400), featured (bool). Body = Beschreibung.
+  **datumLabel-Format:** `"<Datum>, <Zeit/Dauer>"` (z. B. `"26. September 2026,
+  ganztags"` oder `"25. August 2026, 18.30–20.00 Uhr"`) – die Website zeigt das
+  Datum als eigene Kachel und die Zeitangabe als Subtext; immer genau ein Komma
+  zwischen Datum und Zeit/Dauer verwenden.
 - **Modulimpuls** (`src/content/module/*.md`): titel, ausgabe, kategorie
   (`gesellschaft-schweiz|psychologie-gesundheit|beruf-alltag|technik-jugendkultur`),
   teaser, warum[], zugaenge[3–5], verbindungen[], quellen[2–4 {label,url}].
