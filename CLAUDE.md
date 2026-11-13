@@ -103,8 +103,10 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
 - **Region:** Luzern und Zentralschweiz zuerst; darüber hinaus gut erreichbare
   Schweizer Orte (Zürich, Bern, Aarau, Olten, Zug, Basel) und Online schweizweit.
   Weitere Anreise nur für eine besonders starke Empfehlung.
-- **Anbieter-Vielfalt:** von einem Anbieter höchstens **ein Angebot pro Fachbereich**
-  und **höchstens drei in der ganzen Ausgabe**. Bewusst über viele Anbieter streuen.
+- **Anbieter-Vielfalt:** von einem Anbieter höchstens **zwei Angebote pro Fachbereich**
+  und **höchstens vier in der ganzen Ausgabe**. Bewusst über viele Anbieter streuen.
+  (Gelockert im November 2026: Für kurze Kurse unter CHF 400 gibt es nur wenige
+  passende Anbieter.)
 - **Thematische Breite:** in jedem Bereich verschiedene Themen. Im Bereich Bildung &
   Lehrbegleitung ausdrücklich auch Lehrbegleitung (Nachteilsausgleich, Lehrabbruch-
   Prävention, Begleitung in EBA/EFZ), Didaktik, Deutsch/DaZ, Mathematik,
@@ -112,7 +114,8 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
   KI-Angebote pro Ausgabe.**
 - **Verlinkung:** immer die **Kursdetailseite** (mit Datum, Preis, Anmeldung), nie
   ein Sammel-PDF oder Jahresflyer. Flyer nur als allerletzter Notnagel.
-- **Zeithorizont:** Kurse bevorzugt in den nächsten **~6 Monaten**. Weiter entfernte
+- **Zeithorizont:** Kurse im **Halbjahresfenster der Ausgabe** (siehe Rhythmus), also
+  rund sieben Monate ab Erscheinen. Weiter entfernte
   Termine (bis fast ein Jahr) nur, wenn der Kurs erfahrungsgemäss **beliebt** ist und
   eine **frühe Anmeldung** nötig ist – sonst weglassen. Anmeldung muss offen sein;
   abgelaufene oder ausgebuchte Angebote weglassen.
@@ -120,11 +123,16 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
   vorschlagen (siehe `docs/entscheidungslog.md` und Wiederholungsregel).
 - **Nichts erfinden:** nur Angebote mit verifiziertem Titel, Anbieter, Datum, Preis
   und Link. Fehlt ein Detail, Angebot weglassen statt raten.
-- **Menge:** etwa 6–10 Weiterbildungen pro Ausgabe, verteilt auf die Bereiche.
+- **Menge:** etwa **12–14 Weiterbildungen** pro Ausgabe, Richtwert pro Bereich:
+  Berufsintegration 4 · Bildung & Lehrbegleitung 5 · Beratung 4. Gibt das Angebot in
+  einem Bereich nicht genug her, lieber eine Lücke lassen als auffüllen.
+- **Nachträge:** Kurzfristig ausgeschriebene, passende Angebote (oft kostenlose
+  Webinare) dürfen zwischen zwei Ausgaben in die laufende Ausgabe aufgenommen werden –
+  nur auf Anweisung des Menschen, gleiche Regeln.
 
 ## Auswahlregeln Modulimpulse
 
-- **Genau vier Impulse pro Ausgabe**, je einer aus den vier Kategorien:
+- **Acht Impulse pro Ausgabe**, je zwei aus den vier Kategorien:
   Gesellschaft & Schweiz · Psychologie & Gesundheit · Beruf & Alltag ·
   Technik & Jugendkultur.
 - **Lebensrelevant für die Jugendlichen** – möglichst nah an dem, was in der
@@ -149,7 +157,7 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
 
 - **Zweck:** kostenlose, hilfreiche Quellen, die das Team im Job besser machen –
   Studien, Berichte, Fachstellen, gute Podcasts oder Videos. Kein Kurs, keine Werbung.
-- **Menge – weniger ist mehr:** etwa **3–4** pro Ausgabe, über die Bereiche und über
+- **Menge – weniger ist mehr:** etwa **4–5** pro Ausgabe, über die Bereiche und über
   verschiedene `typ` gestreut (nicht nur Berichte). Lieber wenige, starke Empfehlungen
   als eine lange Liste.
 - **Darstellung:** kompakt und aufklappbar (Akkordeon wie die Weiterbildungs-Folge-
@@ -179,6 +187,23 @@ Titel, Anbieter + ähnlicher Titel, ähnliche Beschreibung, gleiche Schlagwörte
 Schweizer Hochdeutsch. Sachlich, konkret, ruhig – wie von einem Menschen kuratiert.
 Satzbau bewusst variieren, keine immer gleichen Muster. Kursinhalte in eigenen
 Worten paraphrasieren, keinen Werbetext übernehmen. Keine Superlative, keine Emojis.
+
+## Rhythmus und Routinen
+
+**Zwei Ausgaben pro Jahr** (seit November 2026, vorher vierteljährlich):
+- **Winter/Frühling:** erscheint Ende November, Kurse Dezember bis Juli.
+- **Sommer/Herbst:** erscheint Anfang Juni, Kurse Juli/August bis Januar.
+
+Die Ausgabe soll mindestens vier Wochen vor dem ersten Kurs erscheinen, weil viele
+Anmeldefristen drei bis vier Wochen vorher enden.
+
+Zwei lokale geplante Routinen (Claude-Desktop-App, laufen nur bei geöffneter App;
+verpasste Läufe werden beim nächsten Start nachgeholt):
+- **`futurx-radar-ernte`** – monatlich: Newsletter-Leads in den Fundus
+  (`docs/kursdatenbank.csv` auf Branch `fundus`), Mails labeln, Laufprotokoll in
+  `docs/ernte-log.md` auf `fundus`.
+- **`futurx-radar-ausgabe`** – am 1. Mai und 1. November: Vorschlagsliste
+  `docs/vorschlaege/JJJJ-MM.md` auf Branch `vorschlag/JJJJ-MM`. Baut nichts.
 
 ## Ablauf einer Ausgabe
 
