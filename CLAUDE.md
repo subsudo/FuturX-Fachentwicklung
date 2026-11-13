@@ -18,8 +18,10 @@ und junge Erwachsene individuell in die Arbeitswelt begleitet. Drei Fachbereiche
 - **Bildung & Lehrbegleitung** – Unterricht in Deutsch/DaZ, Mathematik,
   Allgemeinbildung; Didaktik und Pädagogik, Projektunterricht, selbstorganisiertes
   Lernen, Grundkompetenzen, Lerncoaching, heterogene Gruppen, Prüfungsvorbereitung
-  (Stellwerk/Multicheck), Begleitung von EBA-/EFZ-Lernenden. Digitale Medien und KI
-  sind EIN Thema unter vielen.
+  (Stellwerk/Multicheck). **Lehrbegleitung:** Lernende in EBA/EFZ während der Lehre
+  begleiten – Lernschwierigkeiten und Nachteilsausgleich, Lehrabbruch-Prävention,
+  Zusammenarbeit mit Lehrbetrieb und Berufsfachschule, Lernstrategien, Prüfungs-
+  vorbereitung (QV). Digitale Medien und KI sind EIN Thema unter vielen.
 - **Beratung** – Coaching und persönliche Begleitung, ausdrücklich auch im privaten
   Bereich. Im Vordergrund stehen Beziehung und Gesprächsführung: lösungsorientierte
   und systemische Beratung, Motivational Interviewing, psychische Gesundheit,
@@ -103,9 +105,10 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
   Weitere Anreise nur für eine besonders starke Empfehlung.
 - **Anbieter-Vielfalt:** von einem Anbieter höchstens **ein Angebot pro Fachbereich**
   und **höchstens drei in der ganzen Ausgabe**. Bewusst über viele Anbieter streuen.
-- **Thematische Breite:** in jedem Bereich verschiedene Themen. Im Bereich Bildung
-  ausdrücklich auch Didaktik, Deutsch/DaZ, Mathematik, Allgemeinbildung,
-  Projektunterricht, Lerncoaching – nicht nur KI. **Höchstens ein bis zwei
+- **Thematische Breite:** in jedem Bereich verschiedene Themen. Im Bereich Bildung &
+  Lehrbegleitung ausdrücklich auch Lehrbegleitung (Nachteilsausgleich, Lehrabbruch-
+  Prävention, Begleitung in EBA/EFZ), Didaktik, Deutsch/DaZ, Mathematik,
+  Allgemeinbildung, Projektunterricht, Lerncoaching – nicht nur KI. **Höchstens ein bis zwei
   KI-Angebote pro Ausgabe.**
 - **Verlinkung:** immer die **Kursdetailseite** (mit Datum, Preis, Anmeldung), nie
   ein Sammel-PDF oder Jahresflyer. Flyer nur als allerletzter Notnagel.
@@ -195,8 +198,8 @@ dazwischen: erst Vorschlag, dann (nach der Auswahl des Menschen) Bauen.
    Anbieter/Webquellen (siehe `docs/quellen.md`). Breit streuen.
 4. **Vorschlagsliste erstellen (nicht selbst auswählen):** eine bewusst *diverse*
    Auswahl – mehr Angebote als am Ende nötig – je Angebot verifiziert (Titel, Anbieter,
-   Datum, Preis, Link). **Nach Bereich geordnet** (Berufsintegration · Bildung ·
-   Beratung · Ressourcen), damit der Mensch schnell den Überblick hat. Auch beim letzten
+   Datum, Preis, Link). **Nach Bereich geordnet** (Berufsintegration · Bildung &
+   Lehrbegleitung · Beratung · Ressourcen), damit der Mensch schnell den Überblick hat. Auch beim letzten
    Mal nicht gewählte, aber nicht ausgeschlossene Angebote dürfen erneut vorkommen.
 5. **Dem Menschen zur Auswahl vorlegen und warten.** Der Mensch akzeptiert oder
    verwirft pro Angebot. **Vor der Auswahl wird nichts gebaut.** (Die automatische
