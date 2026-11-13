@@ -18,8 +18,10 @@ und junge Erwachsene individuell in die Arbeitswelt begleitet. Drei Fachbereiche
 - **Bildung & Lehrbegleitung** – Unterricht in Deutsch/DaZ, Mathematik,
   Allgemeinbildung; Didaktik und Pädagogik, Projektunterricht, selbstorganisiertes
   Lernen, Grundkompetenzen, Lerncoaching, heterogene Gruppen, Prüfungsvorbereitung
-  (Stellwerk/Multicheck), Begleitung von EBA-/EFZ-Lernenden. Digitale Medien und KI
-  sind EIN Thema unter vielen.
+  (Stellwerk/Multicheck). **Lehrbegleitung:** Lernende in EBA/EFZ während der Lehre
+  begleiten – Lernschwierigkeiten und Nachteilsausgleich, Lehrabbruch-Prävention,
+  Zusammenarbeit mit Lehrbetrieb und Berufsfachschule, Lernstrategien, Prüfungs-
+  vorbereitung (QV). Digitale Medien und KI sind EIN Thema unter vielen.
 - **Beratung** – Coaching und persönliche Begleitung, ausdrücklich auch im privaten
   Bereich. Im Vordergrund stehen Beziehung und Gesprächsführung: lösungsorientierte
   und systemische Beratung, Motivational Interviewing, psychische Gesundheit,
@@ -71,6 +73,10 @@ Niemals Personen-, Teilnehmenden- oder Evaluationsdaten in dieses Repo schreiben
   (`berufsintegration|bildung|beratung`), ausgabe (Slug), url (Kursseite),
   datumLabel, enddatum (ISO, optional), ort, format (`praesenz|online|hybrid`),
   preisChf (max 400), featured (bool). Body = Beschreibung.
+  **datumLabel-Format:** `"<Datum>, <Zeit/Dauer>"` (z. B. `"26. September 2026,
+  ganztags"` oder `"25. August 2026, 18.30–20.00 Uhr"`) – die Website zeigt das
+  Datum als eigene Kachel und die Zeitangabe als Subtext; immer genau ein Komma
+  zwischen Datum und Zeit/Dauer verwenden.
 - **Modulimpuls** (`src/content/module/*.md`): titel, ausgabe, kategorie
   (`gesellschaft-schweiz|psychologie-gesundheit|beruf-alltag|technik-jugendkultur`),
   teaser, warum[], zugaenge[3–5], verbindungen[], quellen[2–4 {label,url}].
@@ -97,15 +103,19 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
 - **Region:** Luzern und Zentralschweiz zuerst; darüber hinaus gut erreichbare
   Schweizer Orte (Zürich, Bern, Aarau, Olten, Zug, Basel) und Online schweizweit.
   Weitere Anreise nur für eine besonders starke Empfehlung.
-- **Anbieter-Vielfalt:** von einem Anbieter höchstens **ein Angebot pro Fachbereich**
-  und **höchstens drei in der ganzen Ausgabe**. Bewusst über viele Anbieter streuen.
-- **Thematische Breite:** in jedem Bereich verschiedene Themen. Im Bereich Bildung
-  ausdrücklich auch Didaktik, Deutsch/DaZ, Mathematik, Allgemeinbildung,
-  Projektunterricht, Lerncoaching – nicht nur KI. **Höchstens ein bis zwei
+- **Anbieter-Vielfalt:** von einem Anbieter höchstens **zwei Angebote pro Fachbereich**
+  und **höchstens vier in der ganzen Ausgabe**. Bewusst über viele Anbieter streuen.
+  (Gelockert im November 2026: Für kurze Kurse unter CHF 400 gibt es nur wenige
+  passende Anbieter.)
+- **Thematische Breite:** in jedem Bereich verschiedene Themen. Im Bereich Bildung &
+  Lehrbegleitung ausdrücklich auch Lehrbegleitung (Nachteilsausgleich, Lehrabbruch-
+  Prävention, Begleitung in EBA/EFZ), Didaktik, Deutsch/DaZ, Mathematik,
+  Allgemeinbildung, Projektunterricht, Lerncoaching – nicht nur KI. **Höchstens ein bis zwei
   KI-Angebote pro Ausgabe.**
 - **Verlinkung:** immer die **Kursdetailseite** (mit Datum, Preis, Anmeldung), nie
   ein Sammel-PDF oder Jahresflyer. Flyer nur als allerletzter Notnagel.
-- **Zeithorizont:** Kurse bevorzugt in den nächsten **~6 Monaten**. Weiter entfernte
+- **Zeithorizont:** Kurse im **Halbjahresfenster der Ausgabe** (siehe Rhythmus), also
+  rund sieben Monate ab Erscheinen. Weiter entfernte
   Termine (bis fast ein Jahr) nur, wenn der Kurs erfahrungsgemäss **beliebt** ist und
   eine **frühe Anmeldung** nötig ist – sonst weglassen. Anmeldung muss offen sein;
   abgelaufene oder ausgebuchte Angebote weglassen.
@@ -113,11 +123,16 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
   vorschlagen (siehe `docs/entscheidungslog.md` und Wiederholungsregel).
 - **Nichts erfinden:** nur Angebote mit verifiziertem Titel, Anbieter, Datum, Preis
   und Link. Fehlt ein Detail, Angebot weglassen statt raten.
-- **Menge:** etwa 6–10 Weiterbildungen pro Ausgabe, verteilt auf die Bereiche.
+- **Menge:** etwa **12–14 Weiterbildungen** pro Ausgabe, Richtwert pro Bereich:
+  Berufsintegration 4 · Bildung & Lehrbegleitung 5 · Beratung 4. Gibt das Angebot in
+  einem Bereich nicht genug her, lieber eine Lücke lassen als auffüllen.
+- **Nachträge:** Kurzfristig ausgeschriebene, passende Angebote (oft kostenlose
+  Webinare) dürfen zwischen zwei Ausgaben in die laufende Ausgabe aufgenommen werden –
+  nur auf Anweisung des Menschen, gleiche Regeln.
 
 ## Auswahlregeln Modulimpulse
 
-- **Genau vier Impulse pro Ausgabe**, je einer aus den vier Kategorien:
+- **Acht Impulse pro Ausgabe**, je zwei aus den vier Kategorien:
   Gesellschaft & Schweiz · Psychologie & Gesundheit · Beruf & Alltag ·
   Technik & Jugendkultur.
 - **Lebensrelevant für die Jugendlichen** – möglichst nah an dem, was in der
@@ -142,12 +157,21 @@ Abgelaufene Kurse müssen nicht manuell gepflegt werden: Ist `enddatum`
 
 - **Zweck:** kostenlose, hilfreiche Quellen, die das Team im Job besser machen –
   Studien, Berichte, Fachstellen, gute Podcasts oder Videos. Kein Kurs, keine Werbung.
-- **Menge:** etwa 4–6 pro Ausgabe, über die Bereiche und über verschiedene `typ`
-  gestreut (nicht nur Berichte).
+- **Menge – weniger ist mehr:** etwa **4–5** pro Ausgabe, über die Bereiche und über
+  verschiedene `typ` gestreut (nicht nur Berichte). Lieber wenige, starke Empfehlungen
+  als eine lange Liste.
+- **Darstellung:** kompakt und aufklappbar (Akkordeon wie die Weiterbildungs-Folge-
+  einträge), nicht als grosse Karte.
+- **Quellen:** Web-/Fachrecherche UND die abonnierten **Gmail-Newsletter** (Hinweise
+  zu Neuerungen, Berichten, Fachartikeln zur Bildungslandschaft Schweiz). Beide nutzen.
 - **Kostenlos** und frei zugänglich; hinter Paywall oder Login weglassen.
 - **Nichts erfinden:** nur mit verifiziertem Titel, Quelle und funktionierendem Link.
   Bei Podcast/Video die Reputation prüfen (seriöse Herausgeberin oder nachweisbare
   Reichweite/Bewertung); reisserische oder unbelegte Beiträge weglassen.
+- **Wiederholung vermeiden:** dieselbe Empfehlung nie zweimal (Abgleich über
+  `docs/entscheidungslog.md` und URL/Titel). Dasselbe **Thema** frühestens nach ein
+  paar Ausgaben wieder aufgreifen, nicht direkt in der unmittelbar folgenden Ausgabe –
+  bewusst thematische Breite und Aktualität über die Ausgaben hinweg anstreben.
 - Schweizbezug bevorzugen; `warum` in einem Satz konkret auf den Arbeitsnutzen.
 
 ## Wiederholungsregel allgemein
@@ -164,6 +188,23 @@ Schweizer Hochdeutsch. Sachlich, konkret, ruhig – wie von einem Menschen kurat
 Satzbau bewusst variieren, keine immer gleichen Muster. Kursinhalte in eigenen
 Worten paraphrasieren, keinen Werbetext übernehmen. Keine Superlative, keine Emojis.
 
+## Rhythmus und Routinen
+
+**Zwei Ausgaben pro Jahr** (seit November 2026, vorher vierteljährlich):
+- **Winter/Frühling:** erscheint Ende November, Kurse Dezember bis Juli.
+- **Sommer/Herbst:** erscheint Anfang Juni, Kurse Juli/August bis Januar.
+
+Die Ausgabe soll mindestens vier Wochen vor dem ersten Kurs erscheinen, weil viele
+Anmeldefristen drei bis vier Wochen vorher enden.
+
+Zwei lokale geplante Routinen (Claude-Desktop-App, laufen nur bei geöffneter App;
+verpasste Läufe werden beim nächsten Start nachgeholt):
+- **`futurx-radar-ernte`** – monatlich: Newsletter-Leads in den Fundus
+  (`docs/kursdatenbank.csv` auf Branch `fundus`), Mails labeln, Laufprotokoll in
+  `docs/ernte-log.md` auf `fundus`.
+- **`futurx-radar-ausgabe`** – am 1. Mai und 1. November: Vorschlagsliste
+  `docs/vorschlaege/JJJJ-MM.md` auf Branch `vorschlag/JJJJ-MM`. Baut nichts.
+
 ## Ablauf einer Ausgabe
 
 **Grundprinzip: Der Mensch kuratiert, Claude schlägt vor.** Claude wählt nicht
@@ -172,14 +213,18 @@ dazwischen: erst Vorschlag, dann (nach der Auswahl des Menschen) Bauen.
 
 1. Repo-Stand von `main` lesen: dieses CLAUDE.md, die letzten Ausgaben, alle
    bestehenden Inhaltsdateien.
-2. Google Drive lesen: interne Grundlagen, Themenwünsche, **das Entscheidungslog und
-   die Präferenzen** (was der Mensch mag/nicht mag, was ausdrücklich ausgeschlossen ist).
+2. **Entscheidungslog und Präferenzen lesen** (`docs/entscheidungslog.md`, im Repo):
+   was der Mensch mag/nicht mag, was bereits veröffentlicht und was ausdrücklich
+   ausgeschlossen ist. Modulthemen zusätzlich mit der internen Excel-Liste abgleichen
+   (siehe Auswahlregeln Modulimpulse).
 3. Recherchieren: Gmail-Newsletter im verbundenen Konto (nur Newsletter, nichts
-   verändern/senden) und bekannte Anbieter/Webquellen (siehe `docs/quellen.md`). Breit streuen.
+   verändern/senden) – als Quelle sowohl für Weiterbildungen als auch für **Ressourcen**
+   (Berichte, Neuerungen, Fachartikel zur Bildungslandschaft Schweiz) – und bekannte
+   Anbieter/Webquellen (siehe `docs/quellen.md`). Breit streuen.
 4. **Vorschlagsliste erstellen (nicht selbst auswählen):** eine bewusst *diverse*
    Auswahl – mehr Angebote als am Ende nötig – je Angebot verifiziert (Titel, Anbieter,
-   Datum, Preis, Link). **Nach Bereich geordnet** (Berufsintegration · Bildung ·
-   Beratung · Ressourcen), damit der Mensch schnell den Überblick hat. Auch beim letzten
+   Datum, Preis, Link). **Nach Bereich geordnet** (Berufsintegration · Bildung &
+   Lehrbegleitung · Beratung · Ressourcen), damit der Mensch schnell den Überblick hat. Auch beim letzten
    Mal nicht gewählte, aber nicht ausgeschlossene Angebote dürfen erneut vorkommen.
 5. **Dem Menschen zur Auswahl vorlegen und warten.** Der Mensch akzeptiert oder
    verwirft pro Angebot. **Vor der Auswahl wird nichts gebaut.** (Die automatische

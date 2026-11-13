@@ -19,7 +19,10 @@ Statuswerte je Angebot:
 
 ## Präferenzen (laufend, von Claude gepflegt)
 
-Stand 2026-07-12:
+Stand 2026-07-13:
+- **Ressourcen (Fachimpulse):** weniger ist mehr – nur 3–4, kompakt und aufklappbar
+  (nicht als grosse Karte). Auch aus Gmail-Newslettern speisen, nicht nur Web. Dasselbe
+  Thema nicht direkt in der Folgeausgabe wiederholen.
 - **Design:** Modulblock in Beere (Bereichsfarbe), kein separates Violett.
 - **BI ↔ BE:** klar trennen – Berufsintegration = Berufsfindung/Didaktik/Arbeitsmarkt,
   Beratung = Coaching/persönliche Begleitung (auch Privates).
@@ -59,10 +62,10 @@ Stand 2026-07-12:
 | Ressource | Quelle | Status |
 |---|---|---|
 | Nahtstellenbarometer 2026 | SBFI / gfs.bern | Veröffentlicht |
-| berufsberatung.ch | SDBB | Veröffentlicht |
 | Bildungsbericht Schweiz 2026 | SKBF \| CSRE | Veröffentlicht |
-| Kompetent?! Ein Bildungspodcast | Prof. Yves Karlen | Veröffentlicht |
 | Nationaler Gesundheitsbericht 2025 | Obsan | Veröffentlicht |
+| berufsberatung.ch | SDBB | Entfernt – Menge auf 3–4 reduziert (weniger ist mehr); Thema/Quelle bleibt für später möglich |
+| Kompetent?! Ein Bildungspodcast | Prof. Yves Karlen | Entfernt – Menge reduziert; zudem keine nachweisbare Bewertung, für später möglich falls Reichweite belegt |
 
 
 ## Module – Themenabgleich

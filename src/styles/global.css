@@ -156,17 +156,8 @@ details[open] > summary [data-chev] { transform: rotate(180deg); }
 /* Fachimpulse & Ressourcen ----------------------------------------- */
 .ressourcen { margin-top: 34px; }
 .ressourcen__sub { margin: 12px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--text2); max-width: 52ch; }
-.ressource { margin-top: 8px; background: #fbfaf5; border: 1.5px solid #cbc9bd; border-radius: 3px; padding: 16px 18px; transition: background .12s; }
-.ressource:hover { background: #f2f0e7; }
-.ressource:first-of-type { margin-top: 12px; }
-.ressource__meta { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
-.ressource__wo { font-family: var(--mono); font-size: 11px; letter-spacing: .02em; text-transform: uppercase; color: var(--grau); }
-.ressource__titel { margin: 10px 0 0; font-weight: 700; font-size: 17px; line-height: 1.2; }
-.ressource__titel a { color: var(--tinte); transition: color .12s; }
-.ressource__titel a:hover { color: var(--beere); }
-.ressource__quelle { margin: 4px 0 0; font-family: var(--mono); font-size: 11.5px; letter-spacing: .02em; text-transform: uppercase; color: var(--grau); }
-.ressource__warum { margin: 9px 0 0; font-size: 13.5px; line-height: 1.55; color: var(--text); font-weight: 600; }
-.ressource__text p { margin: 6px 0 0; font-size: 13.5px; line-height: 1.6; color: var(--text); }
+.ressourcen .eintrag:first-of-type { margin-top: 16px; }
+.ressource__warum { margin: 0 0 10px; font-size: 13.5px; line-height: 1.55; color: var(--text); font-weight: 600; }
 
 /* Fuss / Navigation / Archiv --------------------------------------- */
 .fuss { margin: 26px 0 0; padding-top: 20px; border-top: 1px solid #dcdbd0; font-family: var(--mono); font-size: 11px; line-height: 1.8; letter-spacing: .02em; color: var(--grau); }
